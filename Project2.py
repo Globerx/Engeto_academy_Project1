@@ -30,8 +30,7 @@ def main():
             print(f"Correct, you've guessed the right number in {guess_counter} guesses! \nThats {user_review}")
             break
 
-
-
+# Function which takes user input and check the formatting, if it is ok, then it return the user input
 def user_input(rand_number):
     guess_list = []
     while True:
@@ -46,7 +45,7 @@ def user_input(rand_number):
         except ValueError:
             print("Spatny format cisla")
 
-
+# function which takes, random number and user input and return the number of 'bulls' and 'cows' for the round
 def bulls_and_cows(guess_num, rand_num):
     bulls = 0
     cows = 0
@@ -57,6 +56,5 @@ def bulls_and_cows(guess_num, rand_num):
             elif y == x and not j == i:
                 cows = cows + 1
     return bulls, cows
-
 
 main()
