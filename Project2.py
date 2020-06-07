@@ -34,7 +34,7 @@ def main():
 def user_input(rand_number):
     guess_list = []
     while True:
-        guess_num = input(">>> ")
+        guess_num = input(" -> ")
         try:
             if len(str(guess_num)) == 4:
                 for i in str(guess_num):
