@@ -1,6 +1,6 @@
 # 1. Define basic variables
-users = {"bob":"123", "ann":"pass123", "mike":"password123" , "liz":"pas123"}
-choice_options = ("1","2","3")
+users = {"bob": "123", "ann": "pass123", "mike": "password123", "liz": "pas123"}
+choice_options = ("1", "2", "3")
 upper = 0
 lower = 0
 title = 0
@@ -41,7 +41,7 @@ print("Welcome to the app. Please log in:")
 print(separator)
 mod = True
 
-while mod == True:
+while mod:
     username = input("USERNAME: ")
     password = input("PASSWORD: ")
     print(separator)
@@ -52,27 +52,31 @@ while mod == True:
         if password == users[username]:
             print("LOGIN SUCCESS")
             mod = False
-        else: print("BAD PASSWORD")
-    else:print("User does not exist")
+        else:
+            print("BAD PASSWORD")
+    else:
+        print("User does not exist")
     print(separator)
 
 # 4. Select text to be analyzed
 
 mod = True
-while mod == True:
+while mod:
     print("We have 3 texts to be analyzed")
     choice = input("Enter a number btw. 1 and 3 to select: ")
     print(separator)
     if choice in choice_options:
         choice = int(choice)
         mod = False
-    else: print("your choice is not available")
+    else:
+        print("your choice is not available")
 
 if choice == 1:
     text_to_be_used = TEXTS[0]
 elif choice == 2:
     text_to_be_used = TEXTS[1]
-else: text_to_be_used = TEXTS[2]
+else:
+    text_to_be_used = TEXTS[2]
 
 # 6. Do operations with text
 
